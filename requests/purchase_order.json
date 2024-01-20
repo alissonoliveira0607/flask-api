@@ -1,0 +1,11 @@
+{
+    "id": 1,
+    "description": "Pedido de compra 1",
+    "items": [
+        {
+            "id": 1,
+            "description": "Item do pedido 1",
+            "price": 100
+        }
+    ]
+}
