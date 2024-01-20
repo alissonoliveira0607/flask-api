@@ -1,0 +1,47 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# CPython
+*.pyc
+
+# PyInstaller
+dist/
+build/
+*.exe
+
+# Virtual environment
+venv/
+ENV/
+
+# macOS
+.DS_Store
+
+# PyCharm
+.idea/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# IPython
+profile_default/
+ipython_config.py
+
+# Pytest
+__pycache__
+.pytest_cache/
+
+# Coverage
+htmlcov/
+
+# Django
+*.log
+db.sqlite3
+media/
+
+# Flask
+instance/
+
+# Sphinx documentation
+docs/_build/
