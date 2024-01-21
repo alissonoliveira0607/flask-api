@@ -73,5 +73,26 @@ def get_items_purchase_orders(id):
     except Exception as e:
         print(e)
 
+
+
+@app.route('/purchase_orders/<int:id>/items', methods=['POST'])
+def post_items_purchase_orders(id):
+    request_data = request.get_json() 
+    for order in purchase_orders:
+        if order['id'] == id:
+            for item in order['items']:
+                if item['id'] == request_data['id']:
+                    return jsonify({'message': f'Item id {request_data["id"]} already exists'}), 400
+            item = {
+                'id': request_data['id'],
+                'description': request_data['description'],
+                'price': request_data['price']
+                }
+            order['items'].append(item)
+            return jsonify(order), 201
+        else:
+            return jsonify({'message': f'Purchase order id {id} Not found'}), 400
+    
+
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
