@@ -69,7 +69,7 @@ def get_items_purchase_orders(id):
             if order['id'] == id:
                 return jsonify(order['items']), 200
             else:
-                return jsonify({'message': f'Purchase order id {id} Not found'}), 400
+                return jsonify({'message': f'Purchase order id {id} Not found.'}), 400
     except Exception as e:
         print(e)
 
